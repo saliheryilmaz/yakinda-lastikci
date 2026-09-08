@@ -129,11 +129,11 @@ export default function Home() {
               title="Mobil lastikçi ve yol yardım sayfaları"
               text="Her hizmet sayfası ayrı title, description, canonical, FAQ ve Service schema altyapısıyla çalışır."
             />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-3">
               {services.map((service) => (
-                <Link key={service.slug} href={`/${service.slug}`} className="rounded-lg border border-slate-200 bg-white p-5 transition hover:border-sky-300 hover:shadow-sm">
-                  <h3 className="text-lg font-semibold text-slate-950">{service.h1}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{service.summary}</p>
+                <Link key={service.slug} href={`/${service.slug}`} className="rounded-lg border border-slate-200 bg-white p-4 transition hover:border-sky-300 hover:shadow-sm">
+                  <h3 className="text-sm font-semibold text-slate-950 sm:text-lg">{service.h1}</h3>
+                  <p className="mt-1 text-xs leading-5 text-slate-600 sm:mt-2 sm:text-sm sm:leading-6">{service.summary}</p>
                 </Link>
               ))}
             </div>
@@ -148,7 +148,7 @@ export default function Home() {
               text="İlçe verileri merkezi yönetilir; her sayfada özgün yerel bağlam, yakın bölgeler, FAQ ve CTA bulunur."
               dark
             />
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
               {serviceAreas.map((area) => (
                 <TrackedLink
                   key={area.slug}

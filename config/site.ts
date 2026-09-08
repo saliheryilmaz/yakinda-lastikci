@@ -4,9 +4,9 @@ export const siteConfig = {
   domain: 'https://yakindalastikci.com.tr',
   description:
     'Konumunuza en yakin mobil lastikci destegine ulasin. Lastik patlamasi, lastik degisimi ve lastik yol yardim talepleri icin 7/24 arama ve WhatsApp akisi.',
-  phoneDisplay: 'TELEFON_NUMARASI_BURAYA',
-  phoneHref: 'tel:TELEFON_NUMARASI_BURAYA',
-  whatsappNumber: '905XXXXXXXXX',
+  phoneDisplay: '0538 047 22 95',
+  phoneHref: 'tel:+905380472295',
+  whatsappNumber: '905380472295',
   email: 'E-POSTA_BURAYA',
   companyLegalName: 'SIRKET_UNVANI_BURAYA',
   taxOffice: 'VERGI_DAIRESI_BURAYA',

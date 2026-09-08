@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { siteConfig } from '@/config/site';
@@ -9,7 +10,16 @@ export function SiteFooter() {
     <footer className="border-t border-slate-200 bg-slate-950 pb-24 text-slate-200 md:pb-0">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
-          <p className="text-lg font-bold text-white">{siteConfig.displayName}</p>
+          <Link href="/" className="inline-flex items-center gap-2">
+            <Image
+              src="/images/yakindalogo.png"
+              alt={`${siteConfig.displayName} logo`}
+              width={36}
+              height={36}
+              className="size-9 rounded-lg object-contain"
+            />
+            <span className="text-lg font-bold text-white">{siteConfig.displayName}</span>
+          </Link>
           <p className="mt-3 max-w-sm text-sm leading-6 text-slate-400">
             İstanbul genelinde mobil lastikçi, lastik yol yardım ve yerinde lastik desteği için arama, WhatsApp ve konum paylaşımı odaklı talep akışı.
           </p>

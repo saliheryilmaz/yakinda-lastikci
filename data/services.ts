@@ -211,6 +211,66 @@ export const services: ServicePage[] = [
       },
     ],
   },
+  {
+    slug: 'gece-lastikci',
+    title: 'Gece Lastikçi | Gece Saatlerinde Lastik Yardımı',
+    h1: 'Gece Lastikçi Desteği',
+    description:
+      'Gece saatlerinde lastik sorunu yaşıyorsanız telefon veya WhatsApp üzerinden gece lastikçi talebi oluşturun.',
+    summary:
+      'Gece lastik problemi yaşayan sürücüler için hızlı iletişim yollarını öne çıkarır; arama ve WhatsApp aksiyonları ilk ekranda.',
+    intent:
+      'Gece geç saatlerde yolda kalan ve acil lastikçi arayan sürücüler için hazırlandı.',
+    benefits: [
+      'Gece erişilebilir iletişim kanalları',
+      'Sabit mobil CTA barı ile tek tıkla arama',
+      'WhatsApp hazır mesaj desteği',
+      'Konum linkiyle güvenli bekleme noktası bildirimi',
+    ],
+    steps: ['Güvenli ve aydınlık noktada durun', 'Telefon veya WhatsApp ile talep açın', 'Konum ve araç bilgisini iletin'],
+    faqs: [
+      {
+        question: 'Gece lastikçi bulmak zor mu?',
+        answer:
+          'Uygunluk saate ve bölgeye göre değişir. Telefon veya WhatsApp üzerinden talep açarak gerçek bilgiyi alabilirsiniz.',
+      },
+      {
+        question: 'Gece lastik yardımı için önceden bilgi vermem gerekiyor mu?',
+        answer:
+          'Hayır. Araç tipi, lastik ölçüsü ve konumunuzu talep anında paylaşmanız yeterlidir.',
+      },
+    ],
+  },
+  {
+    slug: 'avrupa-yakasi-lastikci',
+    title: 'Avrupa Yakası Lastikçi | Mobil Lastik Hizmeti',
+    h1: 'Avrupa Yakası Lastikçi',
+    description:
+      'Avrupa Yakası\'nda lastik sorunu yaşıyorsanız konumunuzu paylaşarak mobil lastikçi talebi oluşturun.',
+    summary:
+      'Avrupa Yakası ilçelerinde lastik yardımı için telefon veya WhatsApp üzerinden hızlıca talep açın.',
+    intent:
+      'Avrupa Yakası\'nda yolda kalan ve en yakın mobil lastikçiye ulaşmak isteyen sürücüler için hazırlandı.',
+    benefits: [
+      'Avrupa Yakası ilçe sayfalarına kolay erişim',
+      'Telefon ve WhatsApp ile hızlı talep akışı',
+      'Konum linkiyle daha net yönlendirme',
+      'Otomobil, SUV ve hafif ticari için uygun talep yapısı',
+    ],
+    steps: ['Güvenli noktada durun', 'İlçenizi veya konum linkinizi hazırlayın', 'Telefon veya WhatsApp ile iletişim kurun'],
+    faqs: [
+      {
+        question: 'Avrupa Yakası\'nın tüm ilçelerinde hizmet var mı?',
+        answer:
+          'Gerçek kapsama bilgisi telefon veya WhatsApp üzerinden netleşir. İlçenizi belirterek talep açabilirsiniz.',
+      },
+      {
+        question: 'Avrupa Yakası\'nda gece lastikçi talebi açılabilir mi?',
+        answer:
+          'Evet. 7/24 talep akışı için telefon ve WhatsApp üzerinden iletişim kurabilirsiniz.',
+      },
+    ],
+  },
 ];
 
 export function getService(slug: string) {

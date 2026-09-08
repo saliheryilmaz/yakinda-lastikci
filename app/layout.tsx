@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   applicationName: siteConfig.displayName,
   manifest: '/manifest.webmanifest',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/images/yakindalogo.png',
+    apple: '/images/yakindalogo.png',
+  },
+  openGraph: {
+    images: [{ url: '/images/yakindalogo.png', width: 512, height: 512 }],
   },
 };
 
