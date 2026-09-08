@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { HeroActions, MobileCtaBar } from '@/components/cta-buttons';
 import { JsonLd } from '@/components/json-ld';
-import { LeadForm } from '@/components/lead-form';
 import { getService, services } from '@/data/services';
 import { createMetadata, serviceSchema } from '@/lib/seo';
 
@@ -30,8 +29,8 @@ export default async function AdsLandingPage({ params }: { params: Promise<{ slu
   return (
     <>
       <main className="min-h-screen bg-slate-950 text-white">
-        <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1fr_420px] lg:px-8">
-          <div>
+        <section className="mx-auto grid min-h-screen max-w-5xl items-center px-4 py-8 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
             <p className="text-sm font-semibold uppercase text-sky-300">Reklam trafiği için hızlı sayfa</p>
             <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-6xl">{service.h1}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{service.summary}</p>
@@ -46,7 +45,6 @@ export default async function AdsLandingPage({ params }: { params: Promise<{ slu
               ))}
             </div>
           </div>
-          <LeadForm compact />
         </section>
       </main>
       <MobileCtaBar />
@@ -54,4 +52,3 @@ export default async function AdsLandingPage({ params }: { params: Promise<{ slu
     </>
   );
 }
-

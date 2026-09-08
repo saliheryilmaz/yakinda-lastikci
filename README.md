@@ -35,7 +35,7 @@ Bu değerler boşsa site hata vermez; tracking scriptleri devreye girmez.
 
 1. GTM container ID değerini alın.
 2. `.env.local` içinde `NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX` olarak ekleyin.
-3. GTM içinde şu event adlarını conversion olarak yapılandırın: `phone_click`, `whatsapp_click`, `location_click`, `location_success`, `lead_form_start`, `lead_form_submit`, `service_area_click`.
+3. GTM içinde şu event adlarını conversion olarak yapılandırın: `phone_click`, `whatsapp_click`, `location_click`, `location_success`, `service_area_click`.
 
 ## Google Ads Conversion
 
@@ -82,11 +82,6 @@ Sayfa otomatik olarak `/istanbul/ornek-ilce-lastikci` adresinde üretilir, sitem
 
 `data/guides.ts` içine yeni makale kaydı ekleyin. Sayfa `/rehber/{slug}` adresinde Article schema ile yayınlanır.
 
-## Lead Form API
-
-Gerçek backend henüz bağlanmadı. `lib/lead-api.ts` içinde TODO bırakıldı. CRM webhook, e-posta servisi veya özel API eklendiğinde `LeadForm` içinden bu abstraction kullanılabilir.
-
 ## SEO Altyapısı
 
 Projede metadata API, canonical URL, robots.txt, sitemap.xml, BreadcrumbList, WebSite, Organization, AutoRepair, Service, FAQPage ve Article schema yapıları bulunur. Reklam landing page'leri `/lp/*` altında noindex ve ana hizmet sayfasına canonical verecek şekilde ayarlanmıştır.
-

@@ -1,7 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { HeroActions, MobileCtaBar } from '@/components/cta-buttons';
-import { LeadForm } from '@/components/lead-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { siteConfig } from '@/config/site';
@@ -31,14 +30,11 @@ export default function ContactPage() {
           </div>
         </section>
         <section className="bg-white py-14">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1fr] lg:px-8">
-            <div className="space-y-4">
-              <Info icon={<Phone className="size-5" />} title="Telefon" text={siteConfig.phoneDisplay} />
-              <Info icon={<Mail className="size-5" />} title="E-posta" text={siteConfig.email} />
-              <Info icon={<MapPin className="size-5" />} title="Adres" text={siteConfig.address} />
-              <Info icon={<MapPin className="size-5" />} title="Şirket" text={`${siteConfig.companyLegalName} / ${siteConfig.taxOffice} / ${siteConfig.taxNumber}`} />
-            </div>
-            <LeadForm />
+          <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+            <Info icon={<Phone className="size-5" />} title="Telefon" text={siteConfig.phoneDisplay} />
+            <Info icon={<Mail className="size-5" />} title="E-posta" text={siteConfig.email} />
+            <Info icon={<MapPin className="size-5" />} title="Adres" text={siteConfig.address} />
+            <Info icon={<MapPin className="size-5" />} title="Şirket" text={`${siteConfig.companyLegalName} / ${siteConfig.taxOffice} / ${siteConfig.taxNumber}`} />
           </div>
         </section>
       </main>

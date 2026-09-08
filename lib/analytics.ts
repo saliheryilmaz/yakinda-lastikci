@@ -5,8 +5,6 @@ export type AnalyticsEventName =
   | 'whatsapp_click'
   | 'location_click'
   | 'location_success'
-  | 'lead_form_start'
-  | 'lead_form_submit'
   | 'service_area_click';
 
 type AnalyticsPayload = {
@@ -43,4 +41,3 @@ export function trackEvent(name: AnalyticsEventName, payload: AnalyticsPayload =
     });
   }
 }
-

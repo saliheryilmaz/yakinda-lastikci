@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { HeroActions, MobileCtaBar } from '@/components/cta-buttons';
 import { JsonLd } from '@/components/json-ld';
-import { LeadForm } from '@/components/lead-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { getService, services } from '@/data/services';
@@ -40,15 +39,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="bg-slate-950 py-12 text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
-            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_0.8fr]">
-              <div>
-                <h1 className="max-w-4xl text-4xl font-bold leading-tight sm:text-5xl">{service.h1}</h1>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{service.summary}</p>
-                <div className="mt-7">
-                  <HeroActions />
-                </div>
+            <div className="mt-8 max-w-4xl">
+              <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{service.h1}</h1>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{service.summary}</p>
+              <div className="mt-7">
+                <HeroActions />
               </div>
-              <LeadForm compact />
             </div>
           </div>
         </section>
@@ -100,4 +96,3 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     </>
   );
 }
-

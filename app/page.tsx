@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { AlertTriangle, CheckCircle2, Clock, MapPin, ShieldCheck, Wrench } from 'lucide-react';
 import { HeroActions, MobileCtaBar, PhoneButton, WhatsappButton } from '@/components/cta-buttons';
 import { JsonLd } from '@/components/json-ld';
-import { LeadForm } from '@/components/lead-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { TrackedLink } from '@/components/tracked-link';
@@ -17,7 +16,7 @@ const homeFaqs = [
   {
     question: 'Konumumu paylaşmadan talep oluşturabilir miyim?',
     answer:
-      'Evet. Konum izni vermek istemezseniz bulunduğunuz ilçeyi telefon, WhatsApp veya form üzerinden yazabilirsiniz.',
+      'Evet. Konum izni vermek istemezseniz bulunduğunuz ilçeyi telefon veya WhatsApp üzerinden yazabilirsiniz.',
   },
   {
     question: 'Telefon numarası nereden değiştirilecek?',
@@ -165,28 +164,25 @@ export default function Home() {
         </section>
 
         <section className="bg-white py-16">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1fr] lg:px-8">
-            <div>
-              <SectionHeading
-                eyebrow="Güven"
-                title="Acil hizmet sitesi gibi net, abartısız ve ölçülebilir"
-                text="Sitede doğrulanmamış hız, fiyat, yorum veya puan iddiası yok. Eksik işletme bilgileri config içinde açık placeholder olarak durur."
-              />
-              <div className="mt-6 grid gap-3">
-                {[
-                  'Telefon numarası görünür ve tıklanabilir.',
-                  'Konum sadece kullanıcı aksiyonuyla alınır.',
-                  'KVKK, gizlilik, çerez ve kullanım şartları sayfaları hazır.',
-                  'Google Ads event isimleri merkezi helper üzerinden çalışır.',
-                ].map((item) => (
-                  <p key={item} className="flex gap-3 rounded-lg bg-slate-50 p-3 text-sm text-slate-700">
-                    <ShieldCheck className="mt-0.5 size-5 shrink-0 text-sky-700" aria-hidden="true" />
-                    {item}
-                  </p>
-                ))}
-              </div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Güven"
+              title="Acil hizmet sitesi gibi net, abartısız ve ölçülebilir"
+              text="Sitede doğrulanmamış hız, fiyat, yorum veya puan iddiası yok. Eksik işletme bilgileri config içinde açık placeholder olarak durur."
+            />
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
+              {[
+                'Telefon numarası görünür ve tıklanabilir.',
+                'Konum sadece kullanıcı aksiyonuyla alınır.',
+                'KVKK, gizlilik, çerez ve kullanım şartları sayfaları hazır.',
+                'Google Ads event isimleri merkezi helper üzerinden çalışır.',
+              ].map((item) => (
+                <p key={item} className="flex gap-3 rounded-lg bg-slate-50 p-4 text-sm text-slate-700">
+                  <ShieldCheck className="mt-0.5 size-5 shrink-0 text-sky-700" aria-hidden="true" />
+                  {item}
+                </p>
+              ))}
             </div>
-            <LeadForm />
           </div>
         </section>
 
