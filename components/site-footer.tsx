@@ -47,7 +47,10 @@ export function SiteFooter() {
         </FooterColumn>
       </div>
       <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-slate-500">
-        © 2026 {siteConfig.displayName}. Şirket bilgileri config dosyasında güncellenmelidir.
+        © 2026 {siteConfig.displayName} · Web tasarım:{' '}
+        <a href="https://www.instagram.com/meswebb/?hl=tr" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300">
+          MESWEB
+        </a>
       </div>
     </footer>
   );
